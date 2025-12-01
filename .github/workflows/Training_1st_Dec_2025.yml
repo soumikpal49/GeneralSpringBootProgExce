@@ -14,6 +14,10 @@ jobs:
      with:
       java-version: '17'
       distribution: microsoft
+
+   - name: Build with Maven
+     run: mvn -B clean install --no-transfer-progress
+      
       
      
      
