@@ -16,7 +16,7 @@ jobs:
       distribution: microsoft
 
    - name: Build with Maven
-     run: 
+     run: |
       mvn -B clean install --no-transfer-progress
       mkdir staging && cp target/*.jar staging
 
