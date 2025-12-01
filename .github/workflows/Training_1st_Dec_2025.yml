@@ -12,14 +12,12 @@ jobs:
      
  test:
   runs-on: windows-latest
-   steps:
+  steps:
    - name: Print
      run: echo "Test"
    
  deploy:
   runs-on: ubuntu-latest
-   steps:
+  steps:
    - name: Print
      run: echo "Deploy"
-   
- 
