@@ -7,17 +7,7 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-   - name: Print
-     run: echo "Build"
+   - name: Checkout
+     uses: actions/checkout@v6.0.0
      
- test:
-  runs-on: windows-latest
-  steps:
-   - name: Print
-     run: echo "Test"
-   
- deploy:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Print
-     run: echo "Deploy"
+ 
