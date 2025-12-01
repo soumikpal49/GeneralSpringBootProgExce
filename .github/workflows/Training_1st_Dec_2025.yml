@@ -1,7 +1,7 @@
 name: First Workflow - Training_1st_Dec_2025
 
 on: 
- push
+ workflow_dispatch
 
 jobs:
  build:
