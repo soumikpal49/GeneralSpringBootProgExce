@@ -2,6 +2,7 @@
 trigger:
 - development
 
+
 pool:
   name: MyAgentPool
   demands:
