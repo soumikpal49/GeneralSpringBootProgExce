@@ -7,28 +7,18 @@ trigger:
 - development
 
 pool:
-  name: MyAgentPool
+  vmImage: 'ubuntu-latest'
   demands:
    -  mvn
   
  
 steps:
-
-  - task: SonarQubePrepare@7
-    inputs:
-     SonarQube: 'Sonar1'
-     scannerMode: 'other'
-     
-
-
   - task: Maven@4
     inputs:
       mavenPomFile: 'pom.xml'
       testResultsFiles: '**surefire-reports/TEST-*.xml'
       javaHomeOption: JDKVersion
       mavenVersionOption: Default
-     
-     
   
   - task: CopyFiles@2
     inputs:
@@ -39,7 +29,7 @@ steps:
     inputs:
       targetPath: '$(Pipeline.Workspace)'
       publishLocation: 'pipeline'
-      artifact: 'drop'
+      artifact: 'my-artifact'
 
 
 
